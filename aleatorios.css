@@ -1,58 +1,118 @@
-/* Estilos básicos para centrar todo */
+/* Estilos básicos - Enfoque Mobile First */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Poppins', sans-serif; /* Aplicar Poppins */
+    background-color: #f4f0fe;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    padding: 20px;
+    margin: 0;
 }
 
 .contenedor {
     background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     text-align: center;
-    width: 350px;
+    /* Adaptabilidad */
+    width: 95%; 
+    max-width: 450px; 
+    margin: auto;
 }
 
 h1 {
     color: #333;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    line-height: 1.4;
 }
-
+.resaltado {
+    background-color: #7651dc; /* Tu morado */
+    color: white;
+    padding: 0 8px; /* Espaciado interno lateral */
+    border-radius: 4px; /* Bordes ligeramente suaves como en la imagen */
+    display: inline-block; /* Para que el padding se aplique correctamente */
+}
 .controles {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
-/* Estilo de la caja de texto */
-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+/* Tabla Dinámica Responsiva */
+#zonaResultados {
+    margin-top: 25px;
+    overflow-x: auto; /* Scroll horizontal en pantallas muy pequeñas */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    font-family: 'Poppins', sans-serif;
+    background-color: #7651dc; /* Tu color morado */
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+td {
+    font-family: 'Poppins', sans-serif;
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #444;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+/* Detalles de acabado */
+tr:nth-child(even) { background-color: #f9f9ff; }
+
+tr:hover { background-color: #f1f0ff; }
+
+tr:last-child td { border-bottom: none; }
+
+/* Inputs y Botón */
+input, button {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border-radius: 8px;
     font-size: 1rem;
+    outline: none;
 }
 
-/* Estilo del botón */
+input {
+    border: 1px solid #ddd;
+    transition: border 0.3s;
+}
+
+input:focus { border-color: #7651dc; }
+
 button {
-    padding: 10px;
-    background-color: #007bff;
+    background-color: #7651dc;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: all 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #5e3bbd;
+    box-shadow: 0 4px 10px rgba(118, 81, 220, 0.3);
 }
 
-/* Espacio para la futura tabla */
-#zonaResultados {
-    margin-top: 20px;
-}
+button:active { transform: scale(0.98); }
