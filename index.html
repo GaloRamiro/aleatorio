@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Aleatorios</title>
+    
+    <link rel="stylesheet" href="aleatorios.css">
+    <link rel="icon" href="imagenes/LogoAleatorio.svg">
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Generador de Números</h1>
+        <p>Ingresa un número entre 5 y 20:</p>
+
+        <div class="controles">
+            <!-- Caja de texto para el número -->
+            <input type="number" id="txtCantidad" placeholder="Ej. 10">
+            
+            
+            <button onclick="generarAleatorios()">Generar Tabla</button>
+        </div>
+
+        <!-- Aquí es donde se dibujará la tabla dinámicamente más tarde -->
+        <div id="zonaResultados"></div>
+    </div>
+
+ 
+    <script src="utilitarios.js"></script>
+    <script src="aleatorios.js"></script>
+</body>
+</html>
